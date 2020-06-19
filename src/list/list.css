@@ -1,0 +1,24 @@
+#list>.tab-bar {
+    display: flex;
+}
+
+#list>.tab-bar>li {
+    padding: 1em;
+    width: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+#list>.tab-bar>li.selected {
+    color: #fff;
+    background: gray;
+}
+
+#list>.tab-content>li {
+    padding: .5em;
+    display: none;
+}
+
+#list>.tab-content>li.active {
+    display: block;
+}
