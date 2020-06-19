@@ -1,0 +1,11 @@
+{
+  "name": "MVC",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Layouwen/MVC.git",
+  "author": "Layouwen <Layouwen@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
