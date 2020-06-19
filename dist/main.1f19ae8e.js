@@ -11294,6 +11294,8 @@ require("./calculator.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n<section id=\"calculator\">\n    <div class=\"output\">\n        <span id=\"number\">100</span>\n    </div>\n    <div class=\"actions\">\n        <button id=\"add1\">+1</button>\n        <button id=\"minus1\">-1</button>\n        <button id=\"mul2\">*2</button>\n        <button id=\"divide2\">\xF72</button>\n    </div>\n</section>\n";
+(0, _jquery.default)(html).appendTo((0, _jquery.default)('body>.main'));
 var $number = (0, _jquery.default)('#number');
 var $add = (0, _jquery.default)('#add1');
 var $minus = (0, _jquery.default)('#minus1');
@@ -11343,6 +11345,8 @@ require("./list.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n<section id=\"list\">\n    <ol class=\"tab-bar\">\n        <li class=\"selected\"><span>one</span></li>\n        <li><span>two</span></li>\n    </ol>\n    <ol class=\"tab-content\">\n        <li>i am content one</li>\n        <li>i am content two</li>\n    </ol>\n</section>\n";
+(0, _jquery.default)(html).appendTo((0, _jquery.default)('body>.main'));
 var $tabBar = (0, _jquery.default)('#list>.tab-bar');
 var $tabContent = (0, _jquery.default)('#list>.tab-content');
 var localKey = 'list.index';
@@ -11370,6 +11374,8 @@ require("./action.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n<section id=\"action\">\n    <div class=\"square\"></div>\n</section>\n";
+(0, _jquery.default)(html).appendTo((0, _jquery.default)('body>.main'));
 var $square = (0, _jquery.default)('#action .square');
 var localKey = 'action.active';
 var active = localStorage.getItem(localKey) === 'yes';
@@ -11397,6 +11403,8 @@ require("./animation.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n<section id=\"animation\">\n    <div class=\"circle\"></div>\n</section>\n";
+(0, _jquery.default)(html).appendTo((0, _jquery.default)('body>.main'));
 var $circle = (0, _jquery.default)('#animation .circle');
 $circle.on('mouseenter', function () {
   $circle.addClass('active');
@@ -11445,7 +11453,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56802" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57631" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

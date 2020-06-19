@@ -2,6 +2,21 @@ import $ from 'jquery'
 import './calculator.css'
 
 
+const html = `
+<section id="calculator">
+    <div class="output">
+        <span id="number">100</span>
+    </div>
+    <div class="actions">
+        <button id="add1">+1</button>
+        <button id="minus1">-1</button>
+        <button id="mul2">*2</button>
+        <button id="divide2">÷2</button>
+    </div>
+</section>
+`
+$(html).appendTo($('body>.main'))
+
 const $number = $('#number')
 const $add = $('#add1')
 const $minus = $('#minus1')

@@ -1,6 +1,21 @@
 import $ from 'jquery'
 import './list.css'
 
+
+const html = `
+<section id="list">
+    <ol class="tab-bar">
+        <li class="selected"><span>one</span></li>
+        <li><span>two</span></li>
+    </ol>
+    <ol class="tab-content">
+        <li>i am content one</li>
+        <li>i am content two</li>
+    </ol>
+</section>
+`
+$(html).appendTo($('body>.main'))
+
 const $tabBar = $('#list>.tab-bar')
 const $tabContent = $('#list>.tab-content')
 const localKey = 'list.index'

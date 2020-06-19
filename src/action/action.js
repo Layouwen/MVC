@@ -1,6 +1,14 @@
 import $ from 'jquery'
 import './action.css'
 
+
+const html = `
+<section id="action">
+    <div class="square"></div>
+</section>
+`
+$(html).appendTo($('body>.main'))
+
 const $square = $('#action .square')
 const localKey = 'action.active'
 const active = localStorage.getItem(localKey) === 'yes'
