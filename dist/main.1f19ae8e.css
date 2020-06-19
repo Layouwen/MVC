@@ -79,5 +79,31 @@ ul {
 #action>.square.active {
     transform: translateX(15vw);
 }
+#animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes change {
+    0% {
+        background: red;
+    }
+
+    100% {
+        background: blue;
+    }
+}
+
+#animation .circle {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+#animation .circle.active {
+    animation: change 1s infinite alternate linear;
+}
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */

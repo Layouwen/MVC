@@ -1,0 +1,26 @@
+#animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes change {
+    0% {
+        background: red;
+    }
+
+    100% {
+        background: blue;
+    }
+}
+
+#animation .circle {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+#animation .circle.active {
+    animation: change 1s infinite alternate linear;
+}

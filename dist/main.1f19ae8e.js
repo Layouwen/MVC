@@ -11370,7 +11370,27 @@ var $square = (0, _jquery.default)('#action .square');
 $square.on('click', function () {
   $square.toggleClass('active');
 });
-},{"jquery":"../node_modules/jquery/dist/jquery.js","./action.css":"action/action.css"}],"main.js":[function(require,module,exports) {
+},{"jquery":"../node_modules/jquery/dist/jquery.js","./action.css":"action/action.css"}],"animation/animation.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"C:/Users/34153/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/css-loader.js"}],"animation/animation.js":[function(require,module,exports) {
+"use strict";
+
+var _jquery = _interopRequireDefault(require("jquery"));
+
+require("./animation.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var $circle = (0, _jquery.default)('#animation .circle');
+$circle.on('mouseenter', function () {
+  $circle.addClass('active');
+}).on('mouseleave', function () {
+  $circle.removeClass('active');
+});
+},{"jquery":"../node_modules/jquery/dist/jquery.js","./animation.css":"animation/animation.css"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 require("./global.css");
@@ -11382,7 +11402,9 @@ require("./calculator/calculator.js");
 require("./list/list.js");
 
 require("./action/action.js");
-},{"./global.css":"global.css","./reset.css":"reset.css","./calculator/calculator.js":"calculator/calculator.js","./list/list.js":"list/list.js","./action/action.js":"action/action.js"}],"C:/Users/34153/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./animation/animation.js");
+},{"./global.css":"global.css","./reset.css":"reset.css","./calculator/calculator.js":"calculator/calculator.js","./list/list.js":"list/list.js","./action/action.js":"action/action.js","./animation/animation.js":"animation/animation.js"}],"C:/Users/34153/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
