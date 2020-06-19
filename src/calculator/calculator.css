@@ -1,0 +1,21 @@
+#calculator {
+    background: #f0f0f0;
+}
+
+.output {
+    padding: 1em 2em;
+    font-size: 20px;
+    border: 1px solid gray;
+    background: #fff;
+}
+
+.actions {
+    padding: 2em;
+}
+
+.actions>button {
+    margin-right: 3em;
+    width: 5em;
+    height: 3em;
+    font-size: 16px;
+}
