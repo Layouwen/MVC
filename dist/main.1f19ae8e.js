@@ -11352,7 +11352,25 @@ $tabBar.on('click', 'li', function (e) {
   var index = $li.index();
   $tabContent.children().eq(index).addClass('active').siblings().removeClass('active');
 });
-},{"jquery":"../node_modules/jquery/dist/jquery.js","./list.css":"list/list.css"}],"main.js":[function(require,module,exports) {
+},{"jquery":"../node_modules/jquery/dist/jquery.js","./list.css":"list/list.css"}],"action/action.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"C:/Users/34153/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/css-loader.js"}],"action/action.js":[function(require,module,exports) {
+"use strict";
+
+var _jquery = _interopRequireDefault(require("jquery"));
+
+require("./action.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var $square = (0, _jquery.default)('#action .square');
+$square.on('click', function () {
+  $square.toggleClass('active');
+});
+},{"jquery":"../node_modules/jquery/dist/jquery.js","./action.css":"action/action.css"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 require("./global.css");
@@ -11362,7 +11380,9 @@ require("./reset.css");
 require("./calculator/calculator.js");
 
 require("./list/list.js");
-},{"./global.css":"global.css","./reset.css":"reset.css","./calculator/calculator.js":"calculator/calculator.js","./list/list.js":"list/list.js"}],"C:/Users/34153/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./action/action.js");
+},{"./global.css":"global.css","./reset.css":"reset.css","./calculator/calculator.js":"calculator/calculator.js","./list/list.js":"list/list.js","./action/action.js":"action/action.js"}],"C:/Users/34153/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11390,7 +11410,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56320" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56802" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
