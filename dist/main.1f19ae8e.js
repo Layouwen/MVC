@@ -11344,14 +11344,18 @@ require("./list.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $tabBar = (0, _jquery.default)('#list>.tab-bar');
-var $tabContent = (0, _jquery.default)('#list>.tab-content'); // tabBar
+var $tabContent = (0, _jquery.default)('#list>.tab-content');
+var localKey = 'list.index';
+var index = localStorage.getItem(localKey) || 0; // tabBar
 
 $tabBar.on('click', 'li', function (e) {
   var $li = (0, _jquery.default)(e.currentTarget);
   $li.addClass('selected').siblings().removeClass('selected');
   var index = $li.index();
+  localStorage.setItem(localKey, index);
   $tabContent.children().eq(index).addClass('active').siblings().removeClass('active');
 });
+$tabBar.children().eq(index).trigger('click');
 },{"jquery":"../node_modules/jquery/dist/jquery.js","./list.css":"list/list.css"}],"action/action.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
