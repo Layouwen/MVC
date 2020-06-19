@@ -11367,8 +11367,17 @@ require("./action.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $square = (0, _jquery.default)('#action .square');
+var localKey = 'action.active';
+var active = localStorage.getItem(localKey) === 'yes';
+$square.toggleClass('active', active);
 $square.on('click', function () {
-  $square.toggleClass('active');
+  if ($square.hasClass('active')) {
+    $square.removeClass('active');
+    localStorage.setItem(localKey, 'no');
+  } else {
+    $square.addClass('active');
+    localStorage.setItem(localKey, 'yes');
+  }
 });
 },{"jquery":"../node_modules/jquery/dist/jquery.js","./action.css":"action/action.css"}],"animation/animation.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
